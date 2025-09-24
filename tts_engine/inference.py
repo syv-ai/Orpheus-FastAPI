@@ -145,6 +145,7 @@ HINDI_VOICES = ["ऋतिका"]
 MANDARIN_VOICES = ["长乐", "白芷"]
 SPANISH_VOICES = ["javi", "sergio", "maria"]
 ITALIAN_VOICES = ["pietro", "giulia", "carlo"]
+DANISH_VOICES = ["mic", "nic", "jacob"]
 
 # Combined list for API compatibility
 AVAILABLE_VOICES = (
@@ -155,7 +156,8 @@ AVAILABLE_VOICES = (
     HINDI_VOICES + 
     MANDARIN_VOICES + 
     SPANISH_VOICES + 
-    ITALIAN_VOICES
+    ITALIAN_VOICES +
+    DANISH_VOICES
 )
 DEFAULT_VOICE = "tara"  # Best voice according to documentation
 
@@ -169,9 +171,10 @@ VOICE_TO_LANGUAGE.update({voice: "hindi" for voice in HINDI_VOICES})
 VOICE_TO_LANGUAGE.update({voice: "mandarin" for voice in MANDARIN_VOICES})
 VOICE_TO_LANGUAGE.update({voice: "spanish" for voice in SPANISH_VOICES})
 VOICE_TO_LANGUAGE.update({voice: "italian" for voice in ITALIAN_VOICES})
+VOICE_TO_LANGUAGE.update({voice: "danish" for voice in DANISH_VOICES})
 
 # Languages list for the UI
-AVAILABLE_LANGUAGES = ["english", "french", "german", "korean", "hindi", "mandarin", "spanish", "italian"]
+AVAILABLE_LANGUAGES = ["english", "french", "german", "korean", "hindi", "mandarin", "spanish", "italian", "danish"]
 
 # Import the unified token handling from speechpipe
 from .speechpipe import turn_token_into_id, CUSTOM_TOKEN_PREFIX
