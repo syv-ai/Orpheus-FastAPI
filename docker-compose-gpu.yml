@@ -60,7 +60,7 @@ services:
       sh -c '
       if [ ! -f /app/models/${ORPHEUS_MODEL_NAME} ]; then
         echo "Downloading model file..."
-        wget -P /app/models https://huggingface.co/mhenrichsen/${ORPHEUS_MODEL_NAME}/resolve/main/${ORPHEUS_MODEL_NAME}
+        wget -P /app/models https://huggingface.co/mhenrichsen/jacob-kan-tale-v2-Q8_0-GGUF/resolve/main/jacob-kan-tale-v2-q8_0.gguf
       else
         echo "Model file already exists"
       fi'
